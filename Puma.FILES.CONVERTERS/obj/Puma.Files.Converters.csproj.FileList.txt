@@ -1,8 +1,0 @@
-bin\Release\Puma.Files.Converters.dll
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\Puma.Files.Converters.dll
-bin\Debug\Puma.Files.Converters.dll
-bin\Debug\Puma.Files.Converters.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Puma.Files.Converters.dll
-obj\Debug\Puma.Files.Converters.pdb

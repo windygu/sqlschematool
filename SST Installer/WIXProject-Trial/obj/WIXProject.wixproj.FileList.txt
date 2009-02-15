@@ -1,4 +1,0 @@
-obj\Debug\SST Setup.wixobj
-C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SST Installer\WIXProject\bin\Debug\SST Setup.msi
-C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SST Installer\WIXProject\bin\Release\SST Setup.msi
-obj\Release\SST Setup.wixobj

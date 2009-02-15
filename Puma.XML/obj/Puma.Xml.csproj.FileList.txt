@@ -1,8 +1,0 @@
-bin\Release\Puma.Xml.dll
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\Puma.Xml.dll
-bin\Debug\Puma.Xml.dll
-bin\Debug\Puma.Xml.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Puma.Xml.dll
-obj\Debug\Puma.Xml.pdb

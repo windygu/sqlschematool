@@ -1,9 +1,0 @@
-bin\Debug\XmlPropertyGrid.dll
-bin\Debug\XmlPropertyGrid.pdb
-bin\Debug\FileConverters.dll
-bin\Debug\FileConverters.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\Lewis.Xml.XmlGrid.resources
-obj\Debug\XmlPropertyGrid.csproj.GenerateResource.Cache
-obj\Debug\XmlPropertyGrid.dll
-obj\Debug\XmlPropertyGrid.pdb
