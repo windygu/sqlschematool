@@ -1,0 +1,4 @@
+<DataBase_Schema>DiffData<Database><Name>Compare results for Source DB XML snapshot: llewis-lt_sql2005_LS5_SCHEMA.xml,
+-- with Target DB XML snapshot: llewis-lt_sql2005_LS5_SCHEMA.xml.
+-- Results are the SQL changes necessary to match
+-- the Target DB schema to the Source DB schema.</Name><Date>2/12/2009</Date><Time>4:58 PM</Time></Database></DataBase_Schema>

@@ -1,0 +1,17 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>http://localhost/SSTUI/</PublishUrlHistory>
+    <InstallUrlHistory>
+    </InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ReferencePath>C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SQL Schema Tool GUI\bin\Release\;C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SQL Schema Tool GUI\bin\Debug\</ReferencePath>
+  </PropertyGroup>
+</Project>

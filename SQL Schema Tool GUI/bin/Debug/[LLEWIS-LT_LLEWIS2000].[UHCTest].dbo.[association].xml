@@ -1,0 +1,17 @@
+<DocumentElement>
+  <Table>
+    <association_code>assoc-a   </association_code>
+    <name>Association A                                                                                                           </name>
+    <expiration_date>2099-12-31T00:00:00-07:00</expiration_date>
+  </Table>
+  <Table>
+    <association_code>assoc-b   </association_code>
+    <name>Association B                                                                                                           </name>
+    <expiration_date>2008-12-31T00:00:00-07:00</expiration_date>
+  </Table>
+  <Table>
+    <association_code>shelly    </association_code>
+    <name>Shelly test                                                                                                             </name>
+    <expiration_date>2099-12-31T00:00:00-07:00</expiration_date>
+  </Table>
+</DocumentElement>

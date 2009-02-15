@@ -1,0 +1,5 @@
+bin\Debug\CustomXmlNode.dll
+bin\Debug\CustomXmlNode.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CustomXmlNode.dll
+obj\Debug\CustomXmlNode.pdb

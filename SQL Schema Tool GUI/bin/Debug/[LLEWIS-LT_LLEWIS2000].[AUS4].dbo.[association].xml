@@ -1,0 +1,7 @@
+<DocumentElement>
+  <Table>
+    <association_code>assoc-a   </association_code>
+    <name>Association A                                                                                                           </name>
+    <expiration_date>2099-12-31T00:00:00-07:00</expiration_date>
+  </Table>
+</DocumentElement>

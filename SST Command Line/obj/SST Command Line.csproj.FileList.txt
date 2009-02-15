@@ -1,0 +1,22 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\SST.dll
+bin\Debug\XmlDiffPatch.dll
+bin\Debug\SST.pdb
+bin\Debug\SST.xml
+bin\Release\SSTCL.exe
+bin\Release\SSTCL.pdb
+bin\Release\SST.dll
+bin\Release\XmlDiffPatch.dll
+bin\Release\SST.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\SSTCL.exe
+obj\Release\SSTCL.pdb
+bin\Debug\SSTCL.exe
+bin\Debug\SSTCL.pdb
+obj\Debug\SSTCL.exe
+obj\Debug\SSTCL.pdb
+obj\Debug\SST Command Line.csproj.GenerateResource.Cache
+obj\Debug\Lewis.SST.Properties.Resources.resources
+bin\Debug\NLog.config
+bin\Debug\NLog.dll
+bin\Debug\NLog.xml

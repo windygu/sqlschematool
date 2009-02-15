@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xd:xmldiff version="1.0" srcDocHash="15624907577878162684" options="None" fragments="no" xmlns:xd="http://schemas.microsoft.com/xmltools/2002/xmldiff">
+  <xd:node match="1">
+    <xd:add match="/1/100" opid="1" />
+    <xd:remove match="1-99" />
+    <xd:remove match="100" opid="1" />
+    <xd:remove match="101-131" />
+  </xd:node>
+  <xd:descriptor opid="1" type="move" />
+</xd:xmldiff>

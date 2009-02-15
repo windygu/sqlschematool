@@ -1,0 +1,350 @@
+<DataBase_Schema>DiffData<Database><Name>C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SQL Schema Tool GUI\bin\Debug\test diff.sql</Name><Date>7/25/2007</Date><Time>7:03 PM</Time></Database><TABLE Action="Alter"><TABLE_NAME>association_plan</TABLE_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_FILEGROUP><TABLE_NAME>association_plan</TABLE_NAME><groupname>PRIMARY</groupname></TABLE_FILEGROUP><TABLE_REFERENCE /><TABLE_CONSTRAINTS /><TABLE_ORIG_CONSTRAINTS /><TABLE_ORIG_REFERENCE />
+  <COLUMN>
+    <Action>Add</Action>
+    <TABLE_NAME>association_plan</TABLE_NAME>
+    <Column_Name>company_group_code</Column_Name>
+    <Type>char</Type>
+    <Base_Type>char</Base_Type>
+    <Length>10</Length>
+    <Prec>10</Prec>
+    <Scale>0</Scale>
+    <Seed>0</Seed>
+    <Increment>0</Increment>
+    <isNullable>1</isNullable>
+    <isIdentity>0</isIdentity>
+    <isComputed>0</isComputed>
+    <Default_Name />
+    <Rule_Name />
+    <Rule_Owner />
+    <Default_Owner />
+    <Default_Value />
+    <NotforRepl>0</NotforRepl>
+    <isRowGuidCol>0</isRowGuidCol>
+    <FullText>0</FullText>
+    <AnsiPad>1</AnsiPad>
+    <Collation>SQL_Latin1_General_CP1_CI_AI</Collation>
+    <Calc_Text />
+  </COLUMN>
+  <COLUMN>
+    <Action>Add</Action>
+    <TABLE_NAME>association_plan</TABLE_NAME>
+    <Column_Name>sub_group_code</Column_Name>
+    <Type>char</Type>
+    <Base_Type>char</Base_Type>
+    <Length>10</Length>
+    <Prec>10</Prec>
+    <Scale>0</Scale>
+    <Seed>0</Seed>
+    <Increment>0</Increment>
+    <isNullable>1</isNullable>
+    <isIdentity>0</isIdentity>
+    <isComputed>0</isComputed>
+    <Default_Name />
+    <Rule_Name />
+    <Rule_Owner />
+    <Default_Owner />
+    <Default_Value />
+    <NotforRepl>0</NotforRepl>
+    <isRowGuidCol>0</isRowGuidCol>
+    <FullText>0</FullText>
+    <AnsiPad>1</AnsiPad>
+    <Collation>SQL_Latin1_General_CP1_CI_AI</Collation>
+    <Calc_Text />
+  </COLUMN>
+  <COLUMN>
+    <Action>Add</Action>
+    <TABLE_NAME>association_plan</TABLE_NAME>
+    <Column_Name>class_group_code</Column_Name>
+    <Type>char</Type>
+    <Base_Type>char</Base_Type>
+    <Length>10</Length>
+    <Prec>10</Prec>
+    <Scale>0</Scale>
+    <Seed>0</Seed>
+    <Increment>0</Increment>
+    <isNullable>1</isNullable>
+    <isIdentity>0</isIdentity>
+    <isComputed>0</isComputed>
+    <Default_Name />
+    <Rule_Name />
+    <Rule_Owner />
+    <Default_Owner />
+    <Default_Value />
+    <NotforRepl>0</NotforRepl>
+    <isRowGuidCol>0</isRowGuidCol>
+    <FullText>0</FullText>
+    <AnsiPad>1</AnsiPad>
+    <Collation>SQL_Latin1_General_CP1_CI_AI</Collation>
+    <Calc_Text />
+  </COLUMN>
+<TABLE_REFERENCE><TABLE_NAME>association_plan</TABLE_NAME><PK_Table>sub_group</PK_Table><FK_Table>association_plan</FK_Table><Constraint>FK_association_plan_sub_group</Constraint><cKeyCol1>association_code</cKeyCol1><cKeyCol2>plan_code_id</cKeyCol2><cKeyCol3>sub_group_code</cKeyCol3><cRefCol1>company_code</cRefCol1><cRefCol2>plan_code_id</cRefCol2><cRefCol3>sub_group_code</cRefCol3><PK_Table_Owner>dbo</PK_Table_Owner><FK_Table_Owner>dbo</FK_Table_Owner><DeleteCascade>0</DeleteCascade><UpdateCascade>0</UpdateCascade></TABLE_REFERENCE></TABLE><TABLE Action="Alter"><TABLE_NAME>company</TABLE_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_FILEGROUP><TABLE_NAME>company</TABLE_NAME><groupname>PRIMARY</groupname></TABLE_FILEGROUP><TABLE_REFERENCE /><TABLE_CONSTRAINTS /><TABLE_ORIG_CONSTRAINTS /><TABLE_ORIG_REFERENCE /><TABLE_INDEX><TABLE_NAME>company</TABLE_NAME><index_name>ix_company_code</index_name><index_description>nonclustered located on PRIMARY</index_description><index_keys>company_code</index_keys></TABLE_INDEX></TABLE><TABLE Action="Alter"><TABLE_NAME>generic_note</TABLE_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_FILEGROUP><TABLE_NAME>generic_note</TABLE_NAME><groupname>PRIMARY</groupname></TABLE_FILEGROUP><TABLE_REFERENCE /><TABLE_CONSTRAINTS /><TABLE_ORIG_CONSTRAINTS /><TABLE_ORIG_REFERENCE /><TABLE_ORIG_REFERENCE><TABLE_NAME>generic_note</TABLE_NAME><PK_Table>note_collection</PK_Table><FK_Table>generic_note</FK_Table><Constraint>FK_generic_note_note_collection</Constraint><cKeyCol1>note_collection_id</cKeyCol1><cRefCol1>note_collection_id</cRefCol1><PK_Table_Owner>dbo</PK_Table_Owner><FK_Table_Owner>dbo</FK_Table_Owner><DeleteCascade>0</DeleteCascade><UpdateCascade>0</UpdateCascade></TABLE_ORIG_REFERENCE></TABLE><TABLE Action="Alter"><TABLE_NAME>note_collection</TABLE_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_FILEGROUP><TABLE_NAME>note_collection</TABLE_NAME><groupname>PRIMARY</groupname></TABLE_FILEGROUP><TABLE_REFERENCE /><TABLE_CONSTRAINTS /><TABLE_ORIG_CONSTRAINTS /><TABLE_ORIG_REFERENCE /><TABLE_ORIG_REFERENCE><TABLE_NAME>note_collection</TABLE_NAME><PK_Table>note_collection</PK_Table><FK_Table>generic_note</FK_Table><Constraint>FK_generic_note_note_collection</Constraint><cKeyCol1>note_collection_id</cKeyCol1><cRefCol1>note_collection_id</cRefCol1><PK_Table_Owner>dbo</PK_Table_Owner><FK_Table_Owner>dbo</FK_Table_Owner><DeleteCascade>0</DeleteCascade><UpdateCascade>0</UpdateCascade></TABLE_ORIG_REFERENCE></TABLE><TABLE Action="Add"><TABLE_NAME>sub_group</TABLE_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_TYPE>TABLE</TABLE_TYPE><COLUMN><TABLE_NAME>sub_group</TABLE_NAME><Column_Name>company_code</Column_Name><Type>char</Type><Base_Type>char</Base_Type><Length>10</Length><Prec>10</Prec><Scale>0</Scale><Seed>0</Seed><Increment>0</Increment><isNullable>0</isNullable><isIdentity>0</isIdentity><isComputed>0</isComputed><isRowGuidCol>0</isRowGuidCol><Default_Constraint></Default_Constraint><Default_Name></Default_Name><Rule_Name></Rule_Name><Default_Owner></Default_Owner><Default_Value></Default_Value><Rule_Owner></Rule_Owner><NotforRepl>0</NotforRepl><FullText>0</FullText><AnsiPad>1</AnsiPad><Collation>SQL_Latin1_General_CP1_CI_AI</Collation><Calc_Text></Calc_Text></COLUMN><COLUMN><TABLE_NAME>sub_group</TABLE_NAME><Column_Name>plan_code_id</Column_Name><Type>char</Type><Base_Type>char</Base_Type><Length>10</Length><Prec>10</Prec><Scale>0</Scale><Seed>0</Seed><Increment>0</Increment><isNullable>0</isNullable><isIdentity>0</isIdentity><isComputed>0</isComputed><isRowGuidCol>0</isRowGuidCol><Default_Constraint></Default_Constraint><Default_Name></Default_Name><Rule_Name></Rule_Name><Default_Owner></Default_Owner><Default_Value></Default_Value><Rule_Owner></Rule_Owner><NotforRepl>0</NotforRepl><FullText>0</FullText><AnsiPad>1</AnsiPad><Collation>SQL_Latin1_General_CP1_CI_AI</Collation><Calc_Text></Calc_Text></COLUMN><COLUMN><TABLE_NAME>sub_group</TABLE_NAME><Column_Name>sub_group_code</Column_Name><Type>char</Type><Base_Type>char</Base_Type><Length>10</Length><Prec>10</Prec><Scale>0</Scale><Seed>0</Seed><Increment>0</Increment><isNullable>0</isNullable><isIdentity>0</isIdentity><isComputed>0</isComputed><isRowGuidCol>0</isRowGuidCol><Default_Constraint></Default_Constraint><Default_Name></Default_Name><Rule_Name></Rule_Name><Default_Owner></Default_Owner><Default_Value></Default_Value><Rule_Owner></Rule_Owner><NotforRepl>0</NotforRepl><FullText>0</FullText><AnsiPad>1</AnsiPad><Collation>SQL_Latin1_General_CP1_CI_AI</Collation><Calc_Text></Calc_Text></COLUMN><COLUMN><TABLE_NAME>sub_group</TABLE_NAME><Column_Name>person_id</Column_Name><Type>int</Type><Base_Type>int</Base_Type><Length>4</Length><Prec>10</Prec><Scale>0</Scale><Seed>0</Seed><Increment>0</Increment><isNullable>0</isNullable><isIdentity>0</isIdentity><isComputed>0</isComputed><isRowGuidCol>0</isRowGuidCol><Default_Constraint></Default_Constraint><Default_Name></Default_Name><Rule_Name></Rule_Name><Default_Owner></Default_Owner><Default_Value></Default_Value><Rule_Owner></Rule_Owner><NotforRepl>0</NotforRepl><FullText>0</FullText><AnsiPad>0</AnsiPad><Collation></Collation><Calc_Text></Calc_Text></COLUMN><TABLE_FILEGROUP><TABLE_NAME>sub_group</TABLE_NAME><groupname>PRIMARY</groupname></TABLE_FILEGROUP><TABLE_REFERENCE><TABLE_NAME>sub_group</TABLE_NAME><PK_Table>sub_group</PK_Table><FK_Table>association_plan</FK_Table><Constraint>FK_association_plan_sub_group</Constraint><cKeyCol1>association_code</cKeyCol1><cKeyCol2>plan_code_id</cKeyCol2><cKeyCol3>sub_group_code</cKeyCol3><cRefCol1>company_code</cRefCol1><cRefCol2>plan_code_id</cRefCol2><cRefCol3>sub_group_code</cRefCol3><PK_Table_Owner>dbo</PK_Table_Owner><FK_Table_Owner>dbo</FK_Table_Owner><DeleteCascade>0</DeleteCascade><UpdateCascade>0</UpdateCascade></TABLE_REFERENCE><TABLE_INDEX><TABLE_NAME>sub_group</TABLE_NAME><index_name>IX_sub_group_person_id</index_name><index_description>nonclustered located on PRIMARY</index_description><index_keys>person_id</index_keys></TABLE_INDEX><TABLE_INDEX><TABLE_NAME>sub_group</TABLE_NAME><index_name>PK_sub_group</index_name><index_description>nonclustered, unique, primary key located on PRIMARY</index_description><index_keys>company_code, plan_code_id, sub_group_code</index_keys></TABLE_INDEX><TABLE_CONSTRAINTS><TABLE_NAME>sub_group</TABLE_NAME></TABLE_CONSTRAINTS></TABLE><VIEW Action="Alter"><VIEW_NAME>aus_user_view</VIEW_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_TYPE>VIEW</TABLE_TYPE><Check_Sum>1479742190</Check_Sum><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>-- for some reason I had to drop the note_collection_id 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>-- field from this view to avoid an error in the code when it
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>-- walked thru the fields
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text></Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>CREATE view aus_user_view as
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.person_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.party_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.last_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.first_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.middle_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.birth_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.title,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.suffix,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.tax_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.tax_type_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.birth_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.sex,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.person_type_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.preferred_language_code,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.email_address,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.marital_status,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.client_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.alt_email_address,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.preferred_contact_mode,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.class_type,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.field1,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.field2,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.field3,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.field4,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person.field5,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.user_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.login_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.password,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.is_active,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.level_of_authority,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.is_underwriter,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.restrict_to_teams,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.role_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.is_service_associate,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.job_title,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.account_locked,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.account_locked_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.bad_login_attempt_count,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.last_bad_login_attempt_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.must_change_password,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.last_password_change_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.is_agent,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.agent_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.is_agency,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.agency_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.deleted,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.use_single_sign_on
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	person,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	aus_user au
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	au.person_id = person.person_id and
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text>	(au.deleted is null or au.deleted = 0)
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>aus_user_view</VIEW_NAME><Text></Text></CREATE_TEXT><VIEW_DEPENDS><VIEW_NAME>aus_user_view</VIEW_NAME></VIEW_DEPENDS></VIEW><VIEW Action="Alter"><VIEW_NAME>company_view</VIEW_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_TYPE>VIEW</TABLE_TYPE><Check_Sum>-287701448</Check_Sum><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>
+
+CREATE  VIEW dbo.company_view
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>AS
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>SELECT
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	  dbo.person.person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.party_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.last_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.first_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.middle_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.birth_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.title
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.suffix
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.tax_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.tax_type_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.birth_date
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.sex
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.person_type_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.preferred_language_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.email_address
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.marital_status
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.client_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.alt_email_address
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.preferred_contact_mode
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.class_type
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.field1
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.field2
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.field3
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.field4
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.field5
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.person.note_collection_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.company_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.allow_aus_approval_flag
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.correspondence_directory
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.full_time_employee_count
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.percent_eligible_employees
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.percent_eligible_dependants
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.current_cobra_indicator
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.expiration_date
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.region_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.tpa_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>	, dbo.company.carrier_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>FROM         dbo.person, dbo.company 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text>WHERE dbo.person.person_id = dbo.company.person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text></Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>company_view</VIEW_NAME><Text></Text></CREATE_TEXT><VIEW_DEPENDS><VIEW_NAME>company_view</VIEW_NAME></VIEW_DEPENDS></VIEW><VIEW Action="Add"><VIEW_NAME>sub_group_view</VIEW_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_TYPE>VIEW</TABLE_TYPE><Check_Sum>-480824869</Check_Sum><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>
+CREATE  VIEW dbo.sub_group_view
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>AS
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>select distinct
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    person.person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.party_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.last_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.first_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.middle_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.birth_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.title
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.suffix
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.tax_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.tax_type_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.birth_date
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.sex
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.person_type_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.preferred_language_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.email_address
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.marital_status
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.client_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.alt_email_address
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.preferred_contact_mode
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , 'SUBGROUP' as class_type
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.field1
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.field2
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.field3
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.field4
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.field5
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , person.note_collection_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.company_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.allow_aus_approval_flag
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.correspondence_directory
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.full_time_employee_count
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.percent_eligible_employees
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.percent_eligible_dependants
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.current_cobra_indicator
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.expiration_date
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.region_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.tpa_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , company.carrier_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , sub_group.plan_code_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    , sub_group.sub_group_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>from company, sub_group, person
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>where 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    company.company_code = sub_group.company_code
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text>    and person.person_id = sub_group.person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>sub_group_view</VIEW_NAME><Text></Text></CREATE_TEXT><VIEW_DEPENDS><VIEW_NAME>sub_group_view</VIEW_NAME></VIEW_DEPENDS></VIEW><VIEW Action="Alter"><VIEW_NAME>rp_all_applicants</VIEW_NAME><TABLE_OWNER>dbo</TABLE_OWNER><TABLE_TYPE>VIEW</TABLE_TYPE><Check_Sum>-1035513874</Check_Sum><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>
+CREATE VIEW rp_all_applicants as
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.company_code,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select assoc.association_name from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		(select association_code, name as association_name from association where association_code not in (select c.company_code from company c, person p where c.person_id = p.person_id and (p.class_type = 'ASSN' or p.class_type = 'GRP'))
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		 union
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		 select c.company_code as association_code ,p.last_name as association_name from company c, person p where c.person_id = p.person_id and (p.class_type = 'ASSN' or p.class_type = 'GRP')) assoc
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where p.association_code = assoc.association_code) as association_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.g_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.client_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.policy_number as case_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.alternate_case_id as alternate_case_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.receive_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.service_associate_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.last_name as applicant_last_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.first_name as applicant_first_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.tax_id as applicant_ssn,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select TOP 1 ps.tax_id from person ps, policy_person pp where ps.person_id = pp.person_id and pp.role_id = 'owner' and pp.policy_id = i.policy_id) as member_ssn,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.sex as gender,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.applicant_status as applicant_status_code,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select code_value from tl_code where language_code = 'en-us' and code_type = 'applicant_status' and code_id = i.applicant_status) as applicant_status,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.applicant_status_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.amount as amount_applied_for,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.birth_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select pa.country_state_id from person_address pa
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where pa.address_type_code = 'RESIDENCE'
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 and pa.person_id = i.person_id) as residence_state_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select ltrim(rtrim(cs.state_name)) + ' (' + ltrim(rtrim(cs.state_code)) + ')' from person_address pa, tl_country_state cs
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where (pa.address_type_code = 'RESIDENCE')
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 and pa.person_id = i.person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 and cs.country_state_id = pa.country_state_id) as residence_state,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.final_action_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		ltrim(rtrim(ps.last_name) + ', ' + rtrim(ps.first_name))
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 	person ps, aus_user u
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		u.person_id = ps.person_id and u.user_id = icv.final_action_by_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	) as final_action_by,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.reason_text as final_action_reason,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select reason_code from tl_final_action_reason where reason_status = (select code_value from tl_code where language_code = 'en-us' and code_type = 'applicant_status' and code_id = icv.coverage_status) and reason_text = icv.reason_text) as reason_code,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.plan_code_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select description from tl_plan_code where plan_code_id = icv.plan_code_id) as plan_code_description,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	icv.planned_premium,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select code_value from tl_acord_codes where code_type = 'Payment Mode' and code_id = p.payment_mode_code) as premium_mode,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	icv.web_quoted_class,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		description
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		ta_rate_table_class
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		rulebook_id =
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 			(select top 1 rulebook_id from rulebook_view where plan_code_id = icv.plan_code_id and ((association_code = p.association_code) or (p.association_code is null)) and (type = 0 or type is null)) and sequence_no = icv.rate_class_quoted) as applied_for_</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>rate_class,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		description
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		ta_rate_table_class
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		rulebook_id =
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 			(select top 1 rulebook_id from rulebook_view where plan_code_id = icv.plan_code_id and ((association_code = p.association_code) or (p.association_code is null)) and (type = 0 or type is null)) and sequence_no = icv.rate_class_approved) as system_rec</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>ommended_rate_class,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		description
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		ta_rate_table_class
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 		rulebook_id =
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 			(select top 1 rulebook_id from rulebook_view where plan_code_id = icv.plan_code_id and ((association_code = p.association_code) or (p.association_code is null)) and (type = 0 or type is null)) and sequence_no = icv.rate_class_issued) as rate_class_a</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>pproved,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.approved_amount as issued_amount,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(SELECT TOP 1 effective_date FROM coverage_person_insured as cpi where cpi.policy_person_id = icv.policy_person_id) as effective_date,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(SELECT top 1 ltrim(rtrim(p.last_name)) from coverage_person_reinsurer as cpr 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		inner join company as c on cpr.company_code = c.company_code 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		inner join coverage_person as cp on cpr.coverage_person_id = cp.coverage_person_id 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		inner join policy_person as pp on pp.person_id = cp.person_id 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		inner join person as p on p.person_id = c.person_id 
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		where pp.policy_person_id = icv.policy_person_id) as reinsurer_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(SELECT top 1 cpr.reinsurance_amount FROM coverage_person_reinsurer as cpr inner join coverage_person as cp on cpr.coverage_person_id = cp.coverage_person_id inner join policy_person as pp on pp.person_id = cp.person_id where pp.policy_person_id = icv.p</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>olicy_person_id) as reinsurance_amount,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.perm_table_rating as table_rating,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	icv.perm_flat_extra_amount as flat_extra_amount,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	p.cwa_amount,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	ap.income,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select tobacco_use_id from tobacco where requirement_information_id = ap.requirement_information_id) as smoker_status,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	ap.occupation,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	p.lead_number_id as aggregator_lead_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	p.source_info,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	p.distributor_code,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.underwriter_id,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		ltrim(rtrim(ps.last_name) + ', ' + rtrim(ps.first_name))
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 	person ps, aus_user u
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		u.person_id = ps.person_id and u.user_id = p.underwriter_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	) as underwriter_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		ltrim(rtrim(ps.last_name) + ', ' + rtrim(ps.first_name))
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 	person ps, aus_user u
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		u.person_id = ps.person_id and u.user_id = p.service_associate_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	) as service_associate_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	(select
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		tm.team_name
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		team tm
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	 where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>		tm.team_id = p.team_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	) as team_name,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select top 1 agent_number from agent_view where policy_id = p.policy_id) as agent_1_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select top 1 agent_number from agent_view where policy_id = p.policy_id and agent_number not in (select agent_number from agent_view where policy_id = p.policy_id)) as agent_2_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>-- 	(select top 1 agency_number from agency_view where policy_id = p.policy_id) as bga_agency_number,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	p.team_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>from
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	policy p,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	insured i,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	application_info_view ap,
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	insured_coverages_view icv
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>where
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.policy_id = p.policy_id and
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	ap.policy_person_id = i.policy_person_id and
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text>	i.policy_person_id = icv.policy_person_id
+</Text></CREATE_TEXT><CREATE_TEXT><VIEW_NAME>rp_all_applicants</VIEW_NAME><Text></Text></CREATE_TEXT><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>application_info_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>requirement_information_id</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>application_info_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>policy_person_id</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>application_info_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>income</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>application_info_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>occupation</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>plan_code_id</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>amount</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>approved_amount</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>policy_person_id</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>perm_flat_extra_amount</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>perm_table_rating</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>coverage_status</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>reason_text</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>final_action_by_id</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>final_action_date</column></VIEW_DEPENDS><VIEW_DEPENDS><VIEW_NAME>rp_all_applicants</VIEW_NAME><depname>insured_coverages_view</depname><owner>dbo</owner><type>view</type><updated>no</updated><selected>no</selected><column>g_number</column></VIEW_DEPENDS></VIEW></DataBase_Schema>

@@ -1,0 +1,5 @@
+bin\Debug\Converters.dll
+bin\Debug\Converters.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Converters.dll
+obj\Debug\Converters.pdb

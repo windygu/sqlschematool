@@ -1,0 +1,24 @@
+<Vehicles>
+  <Cars>
+    <Car>
+      <Name>S-600</Name>
+      <ManufactureDate>2005-03-07</ManufactureDate>
+      <Manufacture>Mersedes</Manufacture>
+      <Equipment>
+        <DoorsCount>5</DoorsCount>
+        <Transmission>Automatic</Transmission>
+      </Equipment>
+    </Car>
+  </Cars>
+  <Trucks>
+    <Truck>
+      <Name>KL</Name>
+      <ManufactureDate>2005-02-17</ManufactureDate>
+      <Manufacture>MAN</Manufacture>
+      <Equipment>
+        <Tonnage>1000</Tonnage>
+        <Transmission>Automatic/Hand</Transmission>
+      </Equipment>
+    </Truck>
+  </Trucks>
+</Vehicles>

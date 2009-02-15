@@ -1,0 +1,199 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFFFCAB1-4209-4390-B855-6FD646AC2AA7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SST</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lewis.SST</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>SST.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>SST.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference DLLs\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+    <Content Include="TODO List.txt" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Help\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\HelpText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SecurityMethods\Security.cs" />
+    <Compile Include="SQLMethods\SQLConnections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SQLMethods\SQLData.cs" />
+    <Compile Include="SQLMethods\SQLServers.cs" />
+    <Compile Include="SQLObjects\BaseObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\ColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Defaults.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\DTSPackages.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Funcs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Jobs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Rules.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Sprocs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\SqlQueryStrings.cs" />
+    <Compile Include="SQLObjects\Tables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Triggers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\UDDTs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLObjects\Views.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLSchemaTool.cs" />
+    <EmbeddedResource Include="Help\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLObjects\Rules.resx">
+      <DependentUpon>Rules.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLObjects\Sprocs.resx">
+      <DependentUpon>Sprocs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLObjects\Tables.resx">
+      <DependentUpon>Tables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLObjects\Triggers.resx">
+      <DependentUpon>Triggers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLObjects\Views.resx">
+      <DependentUpon>Views.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Converters\Converters.csproj">
+      <Project>{5AA77F87-3873-4101-A13C-F45E15B94EB3}</Project>
+      <Name>Converters</Name>
+    </ProjectReference>
+    <ProjectReference Include="XmlDiffView\XmlDiffView8.csproj">
+      <Project>{694D8B35-E80F-4DAF-B454-6BB992630ECA}</Project>
+      <Name>XmlDiffView8</Name>
+    </ProjectReference>
+    <ProjectReference Include="XmlDiff\XmlDiffPatch8.csproj">
+      <Project>{8BA90DA5-E8EB-4DEC-9D41-951D012B90CE}</Project>
+      <Name>XmlDiffPatch8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SQLSchemaTool_Diagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

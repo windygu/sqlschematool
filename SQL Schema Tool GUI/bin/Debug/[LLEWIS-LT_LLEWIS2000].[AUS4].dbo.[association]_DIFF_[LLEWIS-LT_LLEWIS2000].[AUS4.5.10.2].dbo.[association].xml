@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xd:xmldiff version="1.0" srcDocHash="2714501307464878771" options="None" fragments="no" xmlns:xd="http://schemas.microsoft.com/xmltools/2002/xmldiff">
+  <xd:node match="1">
+    <xd:add>
+      <Table>
+        <association_code>ABC       </association_code>
+        <name>ABCAssc                                                                                                                 </name>
+        <expiration_date>2007-05-31T00:00:00-06:00</expiration_date>
+      </Table>
+    </xd:add>
+  </xd:node>
+</xd:xmldiff>

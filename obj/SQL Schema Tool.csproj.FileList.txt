@@ -1,0 +1,34 @@
+bin\Release\SST.xml
+bin\Release\xmldiffpatch.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\SQL Schema Tool.csproj.GenerateResource.Cache
+obj\Debug\SST.pdb
+bin\Debug\SST.pdb
+bin\Debug\SST.xml
+bin\Debug\xmldiffpatch.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SQL Schema Tool.csproj.GenerateResource.Cache
+obj\Debug\Lewis.SST.Xslt.HTML_Table_View.xslt
+obj\Debug\Lewis.SST.Xslt.Pretty.xslt
+obj\Debug\Lewis.SST.SQLObjects.Rules.resources
+obj\Debug\Lewis.SST.SQLObjects.Sprocs.resources
+obj\Debug\Lewis.SST.SQLObjects.Tables.resources
+obj\Debug\Lewis.SST.SQLObjects.Triggers.resources
+obj\Debug\Lewis.SST.SQLObjects.Views.resources
+bin\Debug\SST.dll
+obj\Debug\SST.dll
+bin\Release\SST.dll
+obj\Release\Lewis.SST.Xslt.Create_DB_Objs.xslt
+obj\Release\Lewis.SST.Xslt.Diff_DB_Objs.xslt
+obj\Release\Lewis.SST.Xslt.HTML_Table_View.xslt
+obj\Release\Lewis.SST.Xslt.Pretty.xslt
+obj\Release\Lewis.SST.SQLObjects.Rules.resources
+obj\Release\Lewis.SST.SQLObjects.Sprocs.resources
+obj\Release\Lewis.SST.SQLObjects.Tables.resources
+obj\Release\Lewis.SST.SQLObjects.Triggers.resources
+obj\Release\Lewis.SST.SQLObjects.Views.resources
+obj\Release\SST.dll
+obj\Debug\Lewis.SST.Help.About.resources
+bin\Debug\NLog.dll
+obj\Debug\Lewis.SST.Xslt.Create_DB_Schema.xslt
+obj\Debug\Lewis.SST.Xslt.Diff_DB_Schema.xslt

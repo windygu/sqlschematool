@@ -1,0 +1,12 @@
+<DataExport>
+  <association_plan>
+    <association_code>assoc-a   </association_code>
+    <plan_code_id>BASE10    </plan_code_id>
+    <tpa_code>BASE      </tpa_code>
+    <mortality_max>300</mortality_max>
+    <auto_approve_requires_member>1</auto_approve_requires_member>
+    <underwrite_child>1</underwrite_child>
+    <spouse_can_exceed_member>1</spouse_can_exceed_member>
+    <allow_jet_issue>1</allow_jet_issue>
+  </association_plan>
+</DataExport>

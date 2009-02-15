@@ -1,0 +1,135 @@
+ILMerge version 2.0.7.228
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /t:library /v2 /log:merge.log /out:C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SQL Schema Tool GUI\bin\Debug\SSTassemblies.dll C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\bin\Debug\SST.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\NLog.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\ICSharpCode.TextEditor.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Converters\bin\Debug\Converters.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\DTSPackage.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTS.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSCustTasks.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSPump.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiff\bin\Debug\XmlDiffPatch.dll C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiffView\bin\Debug\XmlDiffPatch.View.dll 
+Set platform to 'v2', using directory 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\..\v2.0.50727' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\bin\Debug\SST.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\NLog.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\ICSharpCode.TextEditor.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Converters\bin\Debug\Converters.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\DTSPackage.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTS.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSCustTasks.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSPump.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiff\bin\Debug\XmlDiffPatch.dll
+	C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiffView\bin\Debug\XmlDiffPatch.View.dll
+Trying to read assembly from the file 'C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll'.
+	Successfully read in assembly.
+	There were no errors reported in EnvDTE's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\bin\Debug\SST.dll'.
+	Successfully read in assembly.
+	There were no errors reported in SST's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\NLog.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\NLog.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NLog's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\ICSharpCode.TextEditor.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Reference DLLs\ICSharpCode.TextEditor.dll'.
+	Successfully read in assembly.
+	There were no errors reported in ICSharpCode.TextEditor's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\Converters\bin\Debug\Converters.dll'.
+	Successfully read in assembly.
+	There were no errors reported in Converters's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\DTSPackage.dll'.
+	Successfully read in assembly.
+	There were no errors reported in DTSPackage's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTS.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTS.dll'.
+	Successfully read in assembly.
+	There were no errors reported in Interop.DTS's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSCustTasks.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSCustTasks.dll'.
+	Successfully read in assembly.
+	There were no errors reported in Interop.DTSCustTasks's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSPump.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\DTS XML\bin\Debug\Interop.DTSPump.dll'.
+	Successfully read in assembly.
+	There were no errors reported in Interop.DTSPump's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll'.
+	Successfully read in assembly.
+	There were no errors reported in WeifenLuo.WinFormsUI.Docking's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiff\bin\Debug\XmlDiffPatch.dll'.
+	Successfully read in assembly.
+	There were no errors reported in XmlDiffPatch's metadata.
+Trying to read assembly from the file 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\XmlDiffView\bin\Debug\XmlDiffPatch.View.dll'.
+	Successfully read in assembly.
+	There were no errors reported in XmlDiffPatch.View's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	EnvDTE.PeKind = ILonly
+	SST.PeKind = ILonly
+	NLog.PeKind = ILonly
+	ICSharpCode.TextEditor.PeKind = ILonly
+	Converters.PeKind = ILonly
+	DTSPackage.PeKind = ILonly
+	Interop.DTS.PeKind = ILonly
+	Interop.DTSCustTasks.PeKind = ILonly
+	Interop.DTSPump.PeKind = ILonly
+	WeifenLuo.WinFormsUI.Docking.PeKind = ILonly
+	XmlDiffPatch.PeKind = ILonly
+	XmlDiffPatch.View.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+Merging assembly 'EnvDTE' into target assembly.
+Merging assembly 'SST' into target assembly.
+Merging assembly 'NLog' into target assembly.
+Merging assembly 'ICSharpCode.TextEditor' into target assembly.
+Merging assembly 'Converters' into target assembly.
+Merging assembly 'DTSPackage' into target assembly.
+Merging assembly 'Interop.DTS' into target assembly.
+Merging assembly 'Interop.DTSCustTasks' into target assembly.
+Merging assembly 'Interop.DTSPump' into target assembly.
+Merging assembly 'WeifenLuo.WinFormsUI.Docking' into target assembly.
+Merging assembly 'XmlDiffPatch' into target assembly.
+Merging assembly 'XmlDiffPatch.View' into target assembly.
+Duplicate type name: modifying name of the type 'Microsoft.XmlDiffPatch.OperationDescriptor' (from assembly 'XmlDiffPatch.View') to 'XmlDiffPatch.View779926.OperationDescriptor'
+Merging assembly-level attributes from assembly 'EnvDTE' into target assembly.
+Copying 1 Win32 Resources from assembly 'EnvDTE' into target assembly.
+ILMerge: Important! Primary assembly had a strong name, but the output does not.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'C:\Documents and Settings\llewis.VPI\My Documents\My Projects\SQL Schema Tool\SQL Schema Tool GUI\bin\Debug\SSTassemblies.dll'.
+AssemblyResolver: Assembly 'System.Data' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Transactions.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NLog' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'System.Xml' is referencing assembly 'System.Data.SqlXml'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Data.SqlXml'.
+Resolved assembly reference 'System.Data.SqlXml' to 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.SqlXml.dll'. (Used referencing Module's directory.)
+Location for referenced module 'KERNEL32.DLL' is ''
+Location for referenced module 'advapi32.dll' is ''
+Location for referenced module 'ole32.dll' is ''
+Location for referenced module 'imm32.dll' is ''
+Location for referenced module 'user32.dll' is ''
+Location for referenced assembly 'mscorlib' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'System.Data' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll'
+	There were no errors reported in  System.Data's metadata.
+Location for referenced assembly 'System' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.Windows.Forms' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll'
+	There were no errors reported in  System.Windows.Forms's metadata.
+Location for referenced assembly 'System.Drawing' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll'
+	There were no errors reported in  System.Drawing's metadata.
+Location for referenced assembly 'System.Configuration' is 'C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'System.Web' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Web.dll'
+	There were no errors reported in  System.Web's metadata.
+Location for referenced assembly 'System.Messaging' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Messaging.dll'
+	There were no errors reported in  System.Messaging's metadata.
+Location for referenced assembly 'System.Design' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Design.dll'
+	There were no errors reported in  System.Design's metadata.
+ILMerge: Done.

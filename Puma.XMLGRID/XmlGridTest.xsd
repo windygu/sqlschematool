@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="Configuration" targetNamespace="http://tempuri.org/XmlGridTest.xsd" xmlns="http://tempuri.org/XmlGridTest.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:NS="http://tempuri.org/Test.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:XmlGrid="http://tempuri.org/XmlGrid.xsd" XmlGrid:CaptionIsName="true" XmlGrid:OmitXmlDeclaration="true">
+<xs:element name="Vehicles" XmlGrid:BindAsCategory="true">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="Cars">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Car" XmlGrid:BindAsArray="true" maxOccurs="unbounded" minOccurs="1" XmlGrid:ArrayCaption="List of Cars">
+							<xs:annotation>
+								<xs:documentation>
+									Element define parameters of particular car.
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" XmlGrid:ParentEntry="true">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="ManufactureDate" type="xs:date"/>
+									<xs:element name="Manufacture" XmlGrid:ParentEntry="true">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Mersedes"/>
+												<xs:enumeration value="BMV"/>
+												<xs:enumeration value="Audi"/>
+												<xs:enumeration value="Bently"/>
+												<xs:enumeration value="Ferrary"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="Equipment">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="DoorsCount" msdata:Caption ="Number of doors" type="xs:unsignedByte"/>
+												<xs:element name="Transmission">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Automatic"/>
+															<xs:enumeration value="Hand"/>
+															<xs:enumeration value="Automatic/Hand"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Trucks">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Truck" XmlGrid:BindAsArray="true" maxOccurs="unbounded" minOccurs="1" XmlGrid:ArrayCaption="List of Trucks">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" XmlGrid:ParentEntry="true">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:maxLength value="10"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="ManufactureDate" type="xs:date"/>
+									<xs:element name="Manufacture" XmlGrid:ParentEntry="true">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="Mersedes"/>
+												<xs:enumeration value="Audi"/>
+												<xs:enumeration value="MAN"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="Equipment">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Tonnage" type="xs:unsignedInt"/>
+												<xs:element name="Transmission">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="Automatic"/>
+															<xs:enumeration value="Hand"/>
+															<xs:enumeration value="Automatic/Hand"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>
+

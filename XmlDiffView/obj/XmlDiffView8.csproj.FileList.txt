@@ -1,0 +1,11 @@
+bin\Debug\XmlDiffPatch.View.dll
+bin\Debug\XmlDiffPatch.View.pdb
+bin\Debug\XmlDiffPatch.dll
+bin\Debug\XmlDiffPatch.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\XmlDiffPatch.View.dll
+obj\Debug\XmlDiffPatch.View.pdb
+bin\Release\XmlDiffPatch.View.dll
+bin\Release\XmlDiffPatch.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\XmlDiffPatch.View.dll
