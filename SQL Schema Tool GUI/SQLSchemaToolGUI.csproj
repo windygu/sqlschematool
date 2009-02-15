@@ -54,7 +54,6 @@
     <Compile Include="Controls\TableTreeNode.cs" />
     <Compile Include="Controls\DBTreeNode.cs" />
     <Compile Include="Controls\Document.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\ExpressionResultsWindow.cs">
       <SubType>Form</SubType>
@@ -73,13 +72,11 @@
     </Compile>
     <Compile Include="Controls\XPathNavigatorTreeNode.cs" />
     <Compile Include="Forms\BATDoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\BATDoc.Designer.cs">
       <DependentUpon>BATDoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\HTMLDoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Options\OptionsDialog.cs">
       <SubType>Form</SubType>
@@ -91,25 +88,21 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XMLDoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XMLDoc.Designer.cs">
       <DependentUpon>XMLDoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DTSDoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Find_Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XMLNodeExplorer.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\XMLNodeExplorer.Designer.cs">
       <DependentUpon>XMLNodeExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SQLDoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SQLDoc.Designer.cs">
       <DependentUpon>SQLDoc.cs</DependentUpon>
@@ -124,13 +117,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SQLServerExplorer.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SQLServerExplorer.Designer.cs">
       <DependentUpon>SQLServerExplorer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ToolWindow.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ToolWindow.Designer.cs">
       <DependentUpon>ToolWindow.cs</DependentUpon>
