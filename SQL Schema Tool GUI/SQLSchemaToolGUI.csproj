@@ -227,9 +227,9 @@
   </Target>
   -->
   <PropertyGroup>
-    <PreBuildEvent>del "$(TargetDir)merge.log"
+    <PreBuildEvent>IF EXIST "$(TargetDir)merge.log" del "$(TargetDir)merge.log"
 "$(TargetDir)merge.bat"</PreBuildEvent>
-    <PostBuildEvent>del "$(TargetDir)merge.log"
+    <PostBuildEvent>IF EXIST "$(TargetDir)merge.log" del "$(TargetDir)merge.log"
 "$(TargetDir)merge.bat"</PostBuildEvent>
   </PropertyGroup>
 </Project>
