@@ -22,6 +22,8 @@ using WeifenLuo.WinFormsUI.Docking;
 
 #region change history
 /// 08-22-2008: C01: LLEWIS:  added message box display about connection err
+/// 03-09-2009: C02: LLEWIS: changes to handle errors if DataTable is null from 
+///                          GetData method
 #endregion
 
 namespace Lewis.SST.Gui
@@ -864,8 +866,11 @@ namespace Lewis.SST.Gui
                                 fileName = arl[1].ToString();
                                 SqlConnection connection = ((ServerTreeNode)ttn.Parent.Parent).SQLServerConnection;
                                 DataTable dt = SQLData.GetData("select * from " + ttn.FullTablePath, connection);
-                                Export exp = new Export("Win");
-                                exp.ExportData(dt, Export.ExportFormat.Excel, fileName);
+                                if (dt != null)
+                                {
+                                    Export exp = new Export("Win");
+                                    exp.ExportData(dt, Export.ExportFormat.Excel, fileName);
+                                }
                             }
                             break;
                         }
@@ -882,8 +887,11 @@ namespace Lewis.SST.Gui
                                 fileName = arl[1].ToString();
                                 SqlConnection connection = ((ServerTreeNode)ttn.Parent.Parent).SQLServerConnection;
                                 DataTable dt = SQLData.GetData("select * from " + ttn.FullTablePath, connection);
-                                Export exp = new Export("Win");
-                                exp.ExportData(dt, Export.ExportFormat.CSV, fileName);
+                                if (dt != null)
+                                {
+                                    Export exp = new Export("Win");
+                                    exp.ExportData(dt, Export.ExportFormat.CSV, fileName);
+                                }
                             }
                             break;
                         }

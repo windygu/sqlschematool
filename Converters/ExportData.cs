@@ -11,6 +11,12 @@ using System.Xml;
 using System.Xml.XPath;
 using System.Xml.Xsl;
 
+#region change history
+/// 03-09-2009: C02: LLEWIS: changes to handle errors if DataTable(s) is null in 
+///                          ExportData methods
+#endregion
+
+
 namespace Lewis.Xml.Converters
 {
 	# region Summary
@@ -74,8 +80,8 @@ namespace Lewis.Xml.Converters
 		public void ExportData(DataTable table, ExportFormat FormatType, string FileName)
 		{
 			try
-			{				
-				if(table.Rows.Count == 0) 
+			{
+                if (table == null || table.Rows.Count == 0) 
 					throw new Exception("There are no details to export.");				
 				
 				// Create Dataset
@@ -122,7 +128,7 @@ namespace Lewis.Xml.Converters
 		{
 			try
 			{
-				if(table.Rows.Count == 0)
+                if (table == null || table.Rows.Count == 0)
 					throw new Exception("There are no details to export");
 				
 				// Create Dataset
@@ -177,7 +183,7 @@ namespace Lewis.Xml.Converters
 		{
 			try
 			{
-				if(table.Rows.Count == 0)
+                if (table == null || table.Rows.Count == 0)
 					throw new Exception("There are no details to export");
 				
 				// Create Dataset
@@ -231,7 +237,9 @@ namespace Lewis.Xml.Converters
 			try
 			{
 				string NewFileName;
-		
+		        if (tables == null)
+                    throw new Exception("There are no details to export.");				
+
 				foreach(DataTable DetailsTable in tables)
 				{
 					if(DetailsTable.Rows.Count == 0) 

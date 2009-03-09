@@ -19,7 +19,9 @@ using System.Xml.Xsl;
 using System.Xml.XPath;
 
 #region change history
-/// 08-22-2008: C01: LLEWIS:  changes to close and dispose of SQL objects
+/// 08-22-2008: C01: LLEWIS: changes to close and dispose of SQL objects
+/// 03-09-2009: C02: LLEWIS: changes to handle errors if data reader is null in 
+///                          GetData method and GetDBTableNames method
 #endregion
 
 namespace Lewis.SST.SQLMethods
@@ -89,20 +91,25 @@ namespace Lewis.SST.SQLMethods
                     command.Prepare();
                     // executes the query.
                     reader = command.ExecuteReader();
-                    while (reader.Read())
+                    if (reader != null)
                     {
-                        retval.Add(reader.GetSqlValue(0));
+                        while (reader.Read())
+                        {
+                            retval.Add(reader.GetSqlValue(0));
+                        }
+                        // closes connection.
+                        reader.Close();
+                        connection.Close();
+                        reader.Dispose();
                     }
-                    // closes connection.
-                    reader.Close();
-                    connection.Close();
-                    reader.Dispose();
                 }
                 catch (Exception ex)
                 {
-                    reader.Dispose();
-                    command.Dispose();
                     logger.Error(SQLSchemaTool.ERRORFORMAT, ex.Message, ex.Source, ex.StackTrace);
+                    if (reader != null) 
+                    { 
+                        reader.Dispose(); 
+                    }
                     throw ex;
                 }
             }
@@ -205,6 +212,7 @@ namespace Lewis.SST.SQLMethods
         /// <returns></returns>
         public static DataTable GetData(string query, SqlConnection connection)
         {
+            DataTable dataTable = null;
             using (SqlCommand command = new SqlCommand())
             {
                 SqlDataReader reader = null;
@@ -222,20 +230,27 @@ namespace Lewis.SST.SQLMethods
                     
                     // executes the query.
                     reader = command.ExecuteReader();
-                    DataTable dataTable = ConstructData(reader);
+                    if (reader != null)
+                    {
+                        dataTable = ConstructData(reader);
 
-                    // closes connection.
-                    reader.Close();
-                    connection.Close();
-                    reader.Dispose();
-                    return dataTable;
+                        // closes connection.
+                        reader.Close();
+                        connection.Close();
+                        reader.Dispose();
+                    }
                 }
                 catch (Exception ex)
                 {
-                    reader.Dispose();
-                    logger.Error(SQLSchemaTool.ERRORFORMAT, ex.Message, ex.Source, ex.StackTrace);
+                    string msg = string.Format("{0} caused an error: {1}", query, ex.Message);
+                    logger.Error(SQLSchemaTool.ERRORFORMAT, msg, ex.Source, ex.StackTrace);
+                    if (reader != null) 
+                    { 
+                        reader.Dispose(); 
+                    }
                     throw ex;
                 }
+                return dataTable;
             }
         }
 
