@@ -995,8 +995,16 @@ namespace Lewis.SST.Gui
         private void selectedDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // generate selected SQL database schema xml snapshot and SQL script files
-            this.toolStripStatusLabel1.Text = "Generating SQL Schema From: " + m_currentSelectedDBTreeNode.Server + "\\" + m_currentSelectedDBTreeNode.Text; 
-            m_serverExplorer.StartAsyncSchemaGeneration(m_currentSelectedDBTreeNode, true);
+			// LLEWIS: 05-18-2010
+			if (m_currentSelectedDBTreeNode != null)
+			{
+				this.toolStripStatusLabel1.Text = "Generating SQL Schema From: " + m_currentSelectedDBTreeNode.Server + "\\" + m_currentSelectedDBTreeNode.Text;
+				m_serverExplorer.StartAsyncSchemaGeneration(m_currentSelectedDBTreeNode, true);
+			}
+			else
+			{
+				this.toolStripStatusLabel1.Text = "No Database Selected!";
+			}
         }
 
         private void chooseXMLSnapshotToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1033,8 +1041,15 @@ namespace Lewis.SST.Gui
         private void databaseSnapshotToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // generate database snapshot xml file from the currently selected database
-            this.toolStripStatusLabel1.Text = "Generating DTS XML Package From: " + m_currentSelectedDBTreeNode.Server + "\\" + m_currentSelectedDBTreeNode.Text; 
-            m_serverExplorer.StartAsyncSchemaGeneration(m_currentSelectedDBTreeNode, false);
+			if (m_currentSelectedDBTreeNode != null) // LLEWIS: 05-18-2010
+			{
+				this.toolStripStatusLabel1.Text = "Generating DTS XML Package From: " + m_currentSelectedDBTreeNode.Server + "\\" + m_currentSelectedDBTreeNode.Text;
+				m_serverExplorer.StartAsyncSchemaGeneration(m_currentSelectedDBTreeNode, false);
+			}
+			else
+			{
+				this.toolStripStatusLabel1.Text = "No Database Selected!";
+			}
         }
 
         private void dTSPackageSnapshotToolStripMenuItem_Click(object sender, EventArgs e)

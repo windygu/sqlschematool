@@ -116,12 +116,12 @@ Location for referenced assembly 'mscorlib' is 'C:\WINDOWS\Microsoft.NET\Framewo
 	There were no errors reported in  mscorlib's metadata.
 Location for referenced assembly 'System.Data' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Data.dll'
 	There were no errors reported in  System.Data's metadata.
-Location for referenced assembly 'System' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll'
-	There were no errors reported in  System's metadata.
 Location for referenced assembly 'System.Xml' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll'
 	There were no errors reported in  System.Xml's metadata.
 Location for referenced assembly 'System.Windows.Forms' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll'
 	There were no errors reported in  System.Windows.Forms's metadata.
+Location for referenced assembly 'System' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll'
+	There were no errors reported in  System's metadata.
 Location for referenced assembly 'System.Drawing' is 'C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll'
 	There were no errors reported in  System.Drawing's metadata.
 Location for referenced assembly 'System.Configuration' is 'C:\WINDOWS\assembly\GAC_MSIL\System.Configuration\2.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'
