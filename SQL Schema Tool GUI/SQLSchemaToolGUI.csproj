@@ -17,6 +17,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,9 @@
       <HintPath>..\Reference DLLs\SSTassemblies.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -228,8 +232,8 @@
   -->
   <PropertyGroup>
     <PreBuildEvent>IF EXIST "$(TargetDir)merge.log" del "$(TargetDir)merge.log"
-"$(TargetDir)merge.bat"</PreBuildEvent>
+"$(TargetDir)merge.bat" "$(TargetDir)"</PreBuildEvent>
     <PostBuildEvent>IF EXIST "$(TargetDir)merge.log" del "$(TargetDir)merge.log"
-"$(TargetDir)merge.bat"</PostBuildEvent>
+"$(TargetDir)merge.bat" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

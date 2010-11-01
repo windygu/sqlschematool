@@ -187,6 +187,20 @@ namespace Lewis.SST
 
         #endregion
 
+		/// <summary>
+		/// convert DB schema information into XML string/XML file
+		/// </summary>
+		/// <param name="SQLServer"></param>
+		/// <param name="DBName"></param>
+		/// <param name="UID"></param>
+		/// <param name="PWD"></param>
+		/// <param name="SQLfile"></param>
+		/// <param name="Translate"></param>
+		/// <param name="Primary"></param>
+		/// <param name="threaded"></param>
+		/// <param name="objectsToSerialize"></param>
+		/// <param name="CustomXSLT"></param>
+		/// <returns></returns>
         public static string SerializeDB(string SQLServer, string DBName, string UID, string PWD, string SQLfile, bool Translate,
             bool Primary, object threaded, byte objectsToSerialize, string CustomXSLT)
         {

@@ -40,10 +40,10 @@ CREATE TABLE #temp2
 (
 [uddt_name] sysname COLLATE SQL_Latin1_General_CP1_CI_AS,
 [user_name] sysname COLLATE SQL_Latin1_General_CP1_CI_AS,
-[type] sysname COLLATE SQL_Latin1_General_CP1_CI_AS,
-[prec] int,
-[scale] int,
-[allownulls] int,
+[type] sysname COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[prec] int NULL,
+[scale] int NULL,
+[allownulls] int NULL,
 [default] sysname COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [rule] sysname COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 )
@@ -512,28 +512,27 @@ SET @cr = char(13)
 SET @lf = char(10)
 SET @crlf = @cr + @lf
 SET @tab = char(9)
-
-SELECT 
-	SPROC_NAME = o.name, 
-	USER_NAME = user_name(o.uid),
-	o.category,
-	ExecIsAnsiNullsOn = (case when (OBJECTPROPERTY(o.id, N'ExecIsAnsiNullsOn')=1) then 1 else 0 end), 
-	ExecIsQuotedIdentOn = (case when (OBJECTPROPERTY(o.id, N'ExecIsQuotedIdentOn')=1) then 1 else 0 end), 
-	ExecIsStartup = (case when (OBJECTPROPERTY(o.id, N'ExecIsStartup')=1) then 1 else 0 end), 
-	IsAnsiNullsOn = (case when (OBJECTPROPERTY(o.id, N'IsAnsiNullsOn')=1) then 1 else 0 end),
-	IsQuotedIdentOn = (case when (OBJECTPROPERTY(o.id, N'IsQuotedIdentOn')=1) then 1 else 0 end),
-	IsExecuted = (case when (OBJECTPROPERTY(o.id, N'IsExecuted')=1) then 1 else 0 end),
-	IsExtendedProc = (case when (OBJECTPROPERTY(o.id, N'IsExtendedProc')=1) then 1 else 0 end),
-	IsReplProc = (case when (OBJECTPROPERTY(o.id, N'IsReplProc')=1) then 1 else 0 end),
-	IsSystemProc = (case when (OBJECTPROPERTY(o.id, N'IsMSShipped')=1) then 1 else 0 end),
-    Check_Sum = (SELECT TOP 1 BINARY_CHECKSUM(SUBSTRING(LOWER( RTRIM(LTRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(s1.Text, @crlf, ''), @tab, ''), @lf, ''), @cr, ''), ' ', '')))),1,4000))
-				 FROM SYSCOMMENTS AS s1 WHERE o.id = s1.id) +
-				(SELECT SUM(LEN(LOWER(RTRIM(LTRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(s2.Text, @crlf, ''), @tab, ''), @lf, ''), @cr, ''), ' ', '')))))) as text_Len
-				 FROM SYSCOMMENTS AS s2 WHERE o.id = s2.id )
-
-FROM dbo.sysobjects o
--- get all non-system procs
-WHERE OBJECTPROPERTY(o.id, N'IsProcedure') = 1 AND OBJECTPROPERTY(o.id, N'IsMSShipped') = 0   
+-- implemented changes based on CodeProject feedback from TheBigKahuna
+SELECT 	
+	SPROC_NAME = s.name + '.' + o.name,  	
+	USER_NAME = user_name(o.uid),	
+	o.category,	
+	ExecIsAnsiNullsOn = (case when (OBJECTPROPERTY(o.id, N'ExecIsAnsiNullsOn')=1) then 1 else 0 end), 	
+	ExecIsQuotedIdentOn = (case when (OBJECTPROPERTY(o.id, N'ExecIsQuotedIdentOn')=1) then 1 else 0 end), 	
+	ExecIsStartup = (case when (OBJECTPROPERTY(o.id, N'ExecIsStartup')=1) then 1 else 0 end), 	
+	IsAnsiNullsOn = (case when (OBJECTPROPERTY(o.id, N'IsAnsiNullsOn')=1) then 1 else 0 end),	
+	IsQuotedIdentOn = (case when (OBJECTPROPERTY(o.id, N'IsQuotedIdentOn')=1) then 1 else 0 end),	
+	IsExecuted = (case when (OBJECTPROPERTY(o.id, N'IsExecuted')=1) then 1 else 0 end),	
+	IsExtendedProc = (case when (OBJECTPROPERTY(o.id, N'IsExtendedProc')=1) then 1 else 0 end),	
+	IsReplProc = (case when (OBJECTPROPERTY(o.id, N'IsReplProc')=1) then 1 else 0 end),	
+	IsSystemProc = (case when (OBJECTPROPERTY(o.id, N'IsMSShipped')=1) then 1 else 0 end),    
+	Check_Sum = (SELECT TOP 1 BINARY_CHECKSUM(SUBSTRING(LOWER( RTRIM(LTRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(s1.Text, @crlf, ''), @tab, ''), @lf, ''), @cr, ''), ' ', '')))),1,4000))				 
+		FROM SYSCOMMENTS AS s1 
+		WHERE o.id = s1.id) +				
+			(SELECT SUM(LEN(LOWER(RTRIM(LTRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(s2.Text, @crlf, ''), @tab, ''), @lf, ''), @cr, ''), ' ', '')))))) as text_Len				 
+			FROM SYSCOMMENTS AS s2 WHERE o.id = s2.id )
+FROM dbo.sysobjects o, sys.schemas s -- get all non-system procs
+	WHERE o.uid = s.schema_id AND OBJECTPROPERTY(o.id, N'IsProcedure') = 1 AND OBJECTPROPERTY(o.id, N'IsMSShipped') = 0   
 ORDER BY SPROC_NAME, USER_NAME
 ";
 
@@ -645,8 +644,13 @@ IF (SELECT object_id('tempdb.dbo.#temp2')) IS NOT NULL
     DROP TABLE #temp2
 END
 IF @xtype <> 'FS'
-BEGIN
-    EXEC sp_helptext '{1}'
+BEGIN 
+	BEGIN TRY
+		EXEC sp_helptext '{1}'
+    END TRY
+    BEGIN CATCH
+		EXEC sp_help '{1}'
+    END CATCH
 END
 
 -- get all the dependency objects

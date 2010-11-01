@@ -4,161 +4,6 @@
         <name>DTSPackage</name>
     </assembly>
     <members>
-        <member name="T:Lewis.SST.DTSPackageClass.DTSColumn">
-            <summary>
-            Class to instantiate a DTS.Column object
-            </summary>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Type">
-            <summary>
-            Gets or sets the Column type.
-            </summary>
-            <value>The type.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.NumericScale">
-            <summary>
-            Gets or sets the Column numeric scale.
-            </summary>
-            <value>The numeric scale.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.DataType">
-            <summary>
-            Gets or sets the type of the Column data.
-            </summary>
-            <value>The type of the data.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Precision">
-            <summary>
-            Gets or sets the Column precision.
-            </summary>
-            <value>The precision.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Ordinal">
-            <summary>
-            Gets or sets the Column ordinal.
-            </summary>
-            <value>The ordinal.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Flags">
-            <summary>
-            Gets or sets the Column flags.
-            </summary>
-            <value>The flags.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.ColumnID">
-            <summary>
-            Gets or sets the column ID.
-            </summary>
-            <value>The column ID.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Size">
-            <summary>
-            Gets or sets the Column size.
-            </summary>
-            <value>The size.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Name">
-            <summary>
-            Gets or sets the Column name.
-            </summary>
-            <value>The name.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Properties">
-            <summary>
-            Gets the DTS Column properties.
-            </summary>
-            <value>The properties.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Nullable">
-            <summary>
-            Gets or sets a value indicating whether this <see cref="T:Lewis.SST.DTSPackageClass.DTSColumn"/> is nullable.
-            </summary>
-            <value><c>true</c> if nullable; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Parent">
-            <summary>
-            Gets the Column parent object.
-            </summary>
-            <value>The parent.</value>
-        </member>
-        <member name="T:Lewis.SST.DTSPackageClass.DTSColumns">
-            <summary>
-            Class to hold a collection of DTSColumn objects
-            </summary>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Add(Lewis.SST.DTSPackageClass.DTSColumn)">
-            <summary>
-            Adds the specified value.
-            </summary>
-            <param name="value">The value.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.IndexOf(Lewis.SST.DTSPackageClass.DTSColumn)">
-            <summary>
-            The Index of the DTS Column object.
-            </summary>
-            <param name="value">The value.</param>
-            <returns>Returns the index of the DTS Column</returns>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Insert(System.Int32,Lewis.SST.DTSPackageClass.DTSColumn)">
-            <summary>
-            Inserts a DTS Column at the specified index.
-            </summary>
-            <param name="index">The index.</param>
-            <param name="value">The value.</param>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Remove(Lewis.SST.DTSPackageClass.DTSColumn)">
-            <summary>
-            Removes the specified DTS Column value.
-            </summary>
-            <param name="value">The value.</param>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Contains(Lewis.SST.DTSPackageClass.DTSColumn)">
-            <summary>
-            Determines whether the collection [contains] [the specified DTS Column value].
-            </summary>
-            <param name="value">The value.</param>
-            <returns>
-            	<c>true</c> if [contains] [the specified value]; otherwise, <c>false</c>.
-            </returns>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnInsert(System.Int32,System.Object)">
-            <summary>
-            Performs additional custom processes before inserting a new element into the
-            <see cref="T:System.Collections.CollectionBase"/> instance.
-            </summary>
-            <param name="index">The zero-based index at which to insert <paramref name="value"/>.</param>
-            <param name="value">The new value of the element at <paramref name="index"/>.</param>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnRemove(System.Int32,System.Object)">
-            <summary>
-            Performs additional custom processes when removing an element from the
-            <see cref="T:System.Collections.CollectionBase"/> instance.
-            </summary>
-            <param name="index">The zero-based index at which <paramref name="value"/> can be found.</param>
-            <param name="value">The value of the element to remove from <paramref name="index"/>.</param>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnSet(System.Int32,System.Object,System.Object)">
-            <summary>
-            Performs additional custom processes before setting a value in the
-            <see cref="T:System.Collections.CollectionBase"/> instance.
-            </summary>
-            <param name="index">The zero-based index at which <paramref name="oldValue"/> can be found.</param>
-            <param name="oldValue">The value to replace with <paramref name="newValue"/>.</param>
-            <param name="newValue">The new value of the element at <paramref name="index"/>.</param>
-        </member>
-        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnValidate(System.Object)">
-            <summary>
-            Performs additional custom processes when validating a value.
-            </summary>
-            <param name="value">The object to validate.</param>
-        </member>
-        <member name="P:Lewis.SST.DTSPackageClass.DTSColumns.Item(System.Int32)">
-            <summary>
-            Gets or sets the <see cref="T:Lewis.SST.DTSPackageClass.DTSColumn"/> at the specified index.
-            </summary>
-            <value>The DTSColumn value.</value>
-        </member>
         <member name="T:Lewis.SST.DTSPackageClass.DTSPackage2">
             <summary>
             DTSPackage class for wrapping DTS package2 functionality.
@@ -533,6 +378,161 @@
             <summary>
             Trusted authentication type.  Sets type to local Windows login.
             </summary>
+        </member>
+        <member name="T:Lewis.SST.DTSPackageClass.DTSColumn">
+            <summary>
+            Class to instantiate a DTS.Column object
+            </summary>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Type">
+            <summary>
+            Gets or sets the Column type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.NumericScale">
+            <summary>
+            Gets or sets the Column numeric scale.
+            </summary>
+            <value>The numeric scale.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.DataType">
+            <summary>
+            Gets or sets the type of the Column data.
+            </summary>
+            <value>The type of the data.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Precision">
+            <summary>
+            Gets or sets the Column precision.
+            </summary>
+            <value>The precision.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Ordinal">
+            <summary>
+            Gets or sets the Column ordinal.
+            </summary>
+            <value>The ordinal.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Flags">
+            <summary>
+            Gets or sets the Column flags.
+            </summary>
+            <value>The flags.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.ColumnID">
+            <summary>
+            Gets or sets the column ID.
+            </summary>
+            <value>The column ID.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Size">
+            <summary>
+            Gets or sets the Column size.
+            </summary>
+            <value>The size.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Name">
+            <summary>
+            Gets or sets the Column name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Properties">
+            <summary>
+            Gets the DTS Column properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Nullable">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Lewis.SST.DTSPackageClass.DTSColumn"/> is nullable.
+            </summary>
+            <value><c>true</c> if nullable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumn.Parent">
+            <summary>
+            Gets the Column parent object.
+            </summary>
+            <value>The parent.</value>
+        </member>
+        <member name="T:Lewis.SST.DTSPackageClass.DTSColumns">
+            <summary>
+            Class to hold a collection of DTSColumn objects
+            </summary>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Add(Lewis.SST.DTSPackageClass.DTSColumn)">
+            <summary>
+            Adds the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.IndexOf(Lewis.SST.DTSPackageClass.DTSColumn)">
+            <summary>
+            The Index of the DTS Column object.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>Returns the index of the DTS Column</returns>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Insert(System.Int32,Lewis.SST.DTSPackageClass.DTSColumn)">
+            <summary>
+            Inserts a DTS Column at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Remove(Lewis.SST.DTSPackageClass.DTSColumn)">
+            <summary>
+            Removes the specified DTS Column value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.Contains(Lewis.SST.DTSPackageClass.DTSColumn)">
+            <summary>
+            Determines whether the collection [contains] [the specified DTS Column value].
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            	<c>true</c> if [contains] [the specified value]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnInsert(System.Int32,System.Object)">
+            <summary>
+            Performs additional custom processes before inserting a new element into the
+            <see cref="T:System.Collections.CollectionBase"/> instance.
+            </summary>
+            <param name="index">The zero-based index at which to insert <paramref name="value"/>.</param>
+            <param name="value">The new value of the element at <paramref name="index"/>.</param>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnRemove(System.Int32,System.Object)">
+            <summary>
+            Performs additional custom processes when removing an element from the
+            <see cref="T:System.Collections.CollectionBase"/> instance.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="value"/> can be found.</param>
+            <param name="value">The value of the element to remove from <paramref name="index"/>.</param>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            Performs additional custom processes before setting a value in the
+            <see cref="T:System.Collections.CollectionBase"/> instance.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="oldValue"/> can be found.</param>
+            <param name="oldValue">The value to replace with <paramref name="newValue"/>.</param>
+            <param name="newValue">The new value of the element at <paramref name="index"/>.</param>
+        </member>
+        <member name="M:Lewis.SST.DTSPackageClass.DTSColumns.OnValidate(System.Object)">
+            <summary>
+            Performs additional custom processes when validating a value.
+            </summary>
+            <param name="value">The object to validate.</param>
+        </member>
+        <member name="P:Lewis.SST.DTSPackageClass.DTSColumns.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Lewis.SST.DTSPackageClass.DTSColumn"/> at the specified index.
+            </summary>
+            <value>The DTSColumn value.</value>
         </member>
     </members>
 </doc>
