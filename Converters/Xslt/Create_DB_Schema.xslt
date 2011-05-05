@@ -220,14 +220,14 @@ GO
 		<xsl:variable name="_name" select="index_name"/>
 		<xsl:variable name="_keys" select="index_keys"/>
 		<xsl:variable name="_gpname" select="substring-after($_desc,'located on ')"/>
-		<xsl:variable name="_select"> (SELECT COLUMNPROPERTY( OBJECT_ID(N'<xsl:value-of select="$_tname"/>'), N'</xsl:variable>
+    <xsl:variable name="_select"> (SELECT COLUMNPROPERTY( OBJECT_ID(N'<xsl:value-of select="$_tname"/>'), N'</xsl:variable>
 		<xsl:variable name="_end1">', 'AllowsNull')) IS NOT NULL  AND </xsl:variable>
 		<xsl:variable name="_end2">', 'AllowsNull')) IS NOT NULL  </xsl:variable>
 		<xsl:variable name="_part0">
 			<xsl:call-template name="SubstringReplace">
 				<xsl:with-param name="stringIn" select="$_keys"/>
 				<xsl:with-param name="substringIn">(-)</xsl:with-param>
-				<xsl:with-param name="substringOut"> DESC</xsl:with-param>
+				<xsl:with-param name="substringOut"> </xsl:with-param>
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="_part1">
@@ -264,7 +264,7 @@ BEGIN
 	ALTER TABLE [<xsl:value-of select="$_towner"/>].[<xsl:value-of select="$_tname"/>] ADD 
 	CONSTRAINT [<xsl:value-of select="$_name"/>] <xsl:if test="contains($_desc, 'primary key')">PRIMARY KEY</xsl:if><xsl:if test="contains($_desc, 'unique key')">UNIQUE</xsl:if> <xsl:choose><xsl:when test="contains($_desc, 'nonclustered')"> NONCLUSTERED </xsl:when><xsl:when test="contains($_desc, 'clustered')"> CLUSTERED </xsl:when></xsl:choose>
 	(
-		<xsl:value-of select="$_part1"/>
+		<xsl:value-of select="$_part1"/> <xsl:if test="contains($_keys, '(-)')"> DESC</xsl:if>
 	)  ON [<xsl:value-of select="$_gpname"/>] 
 END
 ELSE
@@ -285,7 +285,7 @@ GO
 			<xsl:call-template name="SubstringReplace">
 				<xsl:with-param name="stringIn" select="$_keys"/>
 				<xsl:with-param name="substringIn">(-)</xsl:with-param>
-				<xsl:with-param name="substringOut"> DESC</xsl:with-param>
+				<xsl:with-param name="substringOut"> </xsl:with-param>
 			</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="_part1">
@@ -298,7 +298,7 @@ GO
 		<xsl:if test="contains($_desc, 'primary key') != 1 and contains($_desc, 'unique key') != 1">
 IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[<xsl:value-of select="$_towner"/>].[<xsl:value-of select="$_tname"/>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) AND (SELECT FILEGROUP_ID('<xsl:value-of select="$_gpname"/>')) IS NOT NULL
 BEGIN
-	CREATE <xsl:if test="contains($_desc, 'nonclustered, unique located')">UNIQUE</xsl:if> INDEX [<xsl:value-of select="$_name"/>] ON [<xsl:value-of select="$_towner"/>].[<xsl:value-of select="$_tname"/>](<xsl:value-of select="$_part1"/>) ON [<xsl:value-of select="$_gpname"/>]
+	CREATE <xsl:if test="contains($_desc, 'nonclustered, unique located')">UNIQUE</xsl:if> INDEX [<xsl:value-of select="$_name"/>] ON [<xsl:value-of select="$_towner"/>].[<xsl:value-of select="$_tname"/>](<xsl:value-of select="$_part1"/> <xsl:if test="contains($_keys, '(-)')"> DESC</xsl:if>) ON [<xsl:value-of select="$_gpname"/>]
 END
 ELSE
 	RAISERROR ('Table or File Group does not exist.  Check for other errors that caused the table to not be created.', 16, 1)
