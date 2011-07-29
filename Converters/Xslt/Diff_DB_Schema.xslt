@@ -225,7 +225,7 @@ GO
 	<xsl:template name="_CreateColumn" match="COLUMN[isComputed=0]">
 	    <xsl:variable name="_isIdent" select="isIdentity"/>
 	    <xsl:variable name="_type" select="Base_Type"/>
-		[<xsl:value-of select="Column_Name"/>] [<xsl:value-of select="$_type"/>] <xsl:if test="contains($_type, 'char') and Length=-1">(MAX) </xsl:if><xsl:if test="contains($_type, 'char') and Length!=-1"> (<xsl:value-of select="Length"/>) </xsl:if><xsl:if test="contains($_type,'numeric') or contains($_type,'decimal')"> (<xsl:value-of select="Prec"/>,<xsl:value-of select="Scale"/>) </xsl:if><xsl:if test="$_isIdent=1"> Identity (<xsl:value-of select="Seed"/> ,<xsl:value-of select="Increment"/>)</xsl:if><xsl:if test="NotforRepl=1"> NOT FOR REPLICATION</xsl:if><xsl:if test="string-length(Collation)>0"> COLLATE </xsl:if> <xsl:value-of select="Collation"/><xsl:if test="isNullable=0"> NOT</xsl:if> NULL<xsl:if test="isRowGuidCol=1"> ROWGUIDCOL</xsl:if><xsl:if test="string-length(Default_Name)>0"> DEFAULT <xsl:value-of select="Default_Value"/></xsl:if><xsl:if test="position()!=last()">,</xsl:if>
+		[<xsl:value-of select="Column_Name"/>] [<xsl:value-of select="$_type"/>] <xsl:if test="contains($_type, 'char') and (Length=-1 or Prec=-1)">(MAX) </xsl:if><xsl:if test="contains($_type, 'char') and Length!=-1"> (<xsl:value-of select="Length"/>) </xsl:if><xsl:if test="contains($_type,'numeric') or contains($_type,'decimal')"> (<xsl:value-of select="Prec"/>,<xsl:value-of select="Scale"/>) </xsl:if><xsl:if test="$_isIdent=1"> Identity (<xsl:value-of select="Seed"/> ,<xsl:value-of select="Increment"/>)</xsl:if><xsl:if test="NotforRepl=1"> NOT FOR REPLICATION</xsl:if><xsl:if test="string-length(Collation)>0"> COLLATE </xsl:if> <xsl:value-of select="Collation"/><xsl:if test="isNullable=0"> NOT</xsl:if> NULL<xsl:if test="isRowGuidCol=1"> ROWGUIDCOL</xsl:if><xsl:if test="string-length(Default_Name)>0"> DEFAULT <xsl:value-of select="Default_Value"/></xsl:if><xsl:if test="position()!=last()">,</xsl:if>
 	</xsl:template>
 	
 <!-- template to output calculated Table Column -->
@@ -250,7 +250,7 @@ GO
 	<xsl:template name="_Column2ndPass">
 	ALTER TABLE [<xsl:value-of select="../TABLE_OWNER"/>].[<xsl:value-of select="TABLE_NAME"/>]
   <xsl:if test="not(contains(Base_Type,'text'))">
-  ALTER COLUMN [<xsl:value-of select="Column_Name"/>] [<xsl:value-of select="Type"/>] <xsl:if test="contains(Base_Type,'char') and Base_Type=Type and Length=-1"> (MAX) </xsl:if><xsl:if test="contains(Base_Type,'char') and Base_Type=Type and Length>0"> (<xsl:value-of select="Length"/>) </xsl:if><xsl:if test="contains(Base_Type,'numeric') or contains(Base_Type,'decimal')"> (<xsl:value-of select="Prec"/>,<xsl:value-of select="Scale"/>) </xsl:if><xsl:if test="string-length(Collation) > 0"> COLLATE </xsl:if> <xsl:value-of select="Collation"/> <xsl:if test="isNullable=0"> NOT NULL</xsl:if><xsl:text>
+  ALTER COLUMN [<xsl:value-of select="Column_Name"/>] [<xsl:value-of select="Type"/>] <xsl:if test="contains(Base_Type,'char') and Base_Type=Type and (Length=-1 or Prec=-1)"> (MAX) </xsl:if><xsl:if test="contains(Base_Type,'char') and Base_Type=Type and Length>0"> (<xsl:value-of select="Length"/>) </xsl:if><xsl:if test="contains(Base_Type,'numeric') or contains(Base_Type,'decimal')"> (<xsl:value-of select="Prec"/>,<xsl:value-of select="Scale"/>) </xsl:if><xsl:if test="string-length(Collation) > 0"> COLLATE </xsl:if> <xsl:value-of select="Collation"/> <xsl:if test="isNullable=0"> NOT NULL</xsl:if><xsl:text>
 </xsl:text>
     </xsl:if>
     <xsl:if test="contains(Base_Type,'text')">
